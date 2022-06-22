@@ -9,7 +9,7 @@ const getMarcas = async (req, res = response) => {
     try{
         const query = { estado: true};
         const marcasBD = await Marca.find(query);
-        res.json(marcasBD);
+        res.send(marcasBD);
     }catch(e){
         return res.status(500).json({
             error: e
@@ -25,7 +25,7 @@ const getMarcaById = async (req = request, res = response) => {
         const { id } = req.params;
         const query = { estado: true, _id: id}; 
         const marcaBD = await Marca.findOne(query);
-        res.json(marcaBD);
+        res.send(marcaBD);
     }catch(e){
         return res.status(500).json({
             error: e
