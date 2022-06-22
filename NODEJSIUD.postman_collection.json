@@ -35,7 +35,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Gabriela Ceballos\",\r\n    \"email\": \"gabriela@gmail.com\",\r\n    \"estado\": false\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Monica Betancur\",\r\n    \"email\": \"gabriela@gmail.com\",\r\n    \"estado\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
