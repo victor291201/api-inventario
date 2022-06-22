@@ -23,10 +23,10 @@ app.use(fileUpload({
 }));
 app.use(cors()); 
 
-app.use('/api/usuarios',  require('./routes/usuario'));
-app.use('/api/tiposequipo', require('./routes/tipoEquipo'));
-app.use('/api/estados', require('./routes/estado'));
-app.use('/api/marcas', require('./routes/marca'));
-app.use('/api/inventarios', require('./routes/inventario'));
+app.use('/usuarios',  require('./routes/usuario'));
+app.use('/tiposequipo', require('./routes/tipoEquipo'));
+app.use('/estados', require('./routes/estado'));
+app.use('/marcas', require('./routes/marca'));
+app.use('/inventarios', require('./routes/inventario'));
 
 module.exports = app;
