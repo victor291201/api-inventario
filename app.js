@@ -1,5 +1,6 @@
 const express = require('express');
 
+const { mongoConn } = require('./databases/configuration');
 const app = express();
 
 const fileUpload = require('express-fileupload');
@@ -14,13 +15,11 @@ const inventarios = require('./routes/inventario');
 
 //middlewares
 app.use(express.urlencoded({extended: false}));
+require('dotenv').config();
+mongoConn();
+const port = process.env.PORT || 3030
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
-
-app.use(fileUpload({
-    useTempFiles : true,
-    tempFileDir : '/tmp/'
-}));
 app.use(cors()); 
 
 app.use('/usuarios',  require('./routes/usuario'));
